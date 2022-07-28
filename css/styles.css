@@ -140,12 +140,12 @@ del documento */
 /* 9:  Estilos definidos para dispositivos moviles,
 diseño responsive para pantallas con max-width: 700px */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     /* ajustamos el tamaño de los textos del logotipo del geoportal */        
     nav{        
         justify-content: right;
         align-items: center;         
-        position: relative;          
+        position: relative;                 
     }
     .logo-uniquindio{
         position: absolute;
@@ -177,7 +177,8 @@ diseño responsive para pantallas con max-width: 700px */
         right: -250px;
         text-align: left;
         z-index: 2000;
-        transition: 1s;        
+        transition: 1s;
+        overflow: scroll;        
     }
     .links-navegacion ul{
         padding: 10px;
@@ -201,6 +202,55 @@ diseño responsive para pantallas con max-width: 700px */
         margin-top: 30px ;
     }
 
+}
+
+/* 11: Diseño Responsive para dispositivos moviles,
+con orientacion horizontal */
+@media screen and (max-width:800px) and (orientation:landscape) {
+    .logo-uniquindio{
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        position: absolute;
+        top: 70%;
+        left: 7%;
+    }  
+    .links-navegacion{
+        z-index: 1000;
+        line-height: 20px;
+    } 
+    .logotipo-sig{        
+        width: 70%;             
+        height: 90vh;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 0;                    
+    }
+    .logotipo-sig h1{
+        font-size: 30px;
+        line-height: 5px;                    
+    }
+    .logotipo-sig p{      
+        /* arriba/ derecha /abajo/ izquierda */
+        margin: 70px 0px 0px 0px;
+        padding: 0px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .btn-sig{        
+        margin: 80px 0px 0px 0px;
+        padding: 7px 15px;
+        font-size: 13px;
+    }   
+    .header-sig nav .fa-solid{
+        font-size: 20px;
+    }
+    .links-navegacion ul li a{
+        font-size: 14px;
+        
+    }
 }
 
 
