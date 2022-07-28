@@ -1,0 +1,206 @@
+/* 6: variables generales de estilos */
+:root{
+    --color-sec: #f44336;
+    --fondo-blanco: #fff;
+    --color-texto-header: #fff;
+    --color-gradiente: rgba(4,9,30,0.8);
+}
+
+/* 7: estilos generales para el documento */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 8: estilos para el header-sig , vista general;
+dimensiones alto y ancho;
+imagen de fondo, posicionamiento y tamaño */
+.header-sig{    
+    min-height: 100vh;
+    width: 100%;    
+    background-image: linear-gradient(var(--color-gradiente), var(--color-gradiente)), url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+/* estilos para la barra de navegacion */
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* estilos logo-uniquindio, 
+tamaño de imagen del logo */
+.logo-uniquindio{
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    /* box-shadow: dfX, dfY, Radio, Color. */
+    box-shadow: 0px 0px 30px rgba(255, 255, 255,0.6);
+    background: var(--fondo-blanco);
+}
+/* tamaño del logo uniquindio */
+.logo-uniquindio img{
+    width: 80%;
+}
+
+/* estilos para los links de navegacion
+del documento */
+
+/* definimos longitud y alineamiento de texto */
+.links-navegacion{
+    flex: 1;
+    text-align: right;    
+}
+
+/* texto de la lista */
+.links-navegacion ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 7px;
+    position: relative;
+}
+
+/* texto de los links */
+.links-navegacion ul li a{
+    color: var(--color-texto-header);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* estilo de selecion */
+.links-navegacion ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color-sec);
+    display: block;
+    margin: auto;
+    transition: 0.8s;
+}
+.links-navegacion ul li:hover::after{
+    width: 100%;
+}
+
+/* estilos para el logotipo del Geoportal Uniquindiano */
+.logotipo-sig{
+    width: 90%;
+    color: var(--color-texto-header);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* requiere de una transformacion: traslado */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 40px;
+    z-index: 1000;
+}
+.logotipo-sig h1{
+    font-size: 65px;
+    line-height: 40px;
+    margin-top: 30px;
+}
+.logotipo-sig p{
+    margin: 50px 0px 60px;
+    font-size: 16px;
+    
+}
+/* estilos para el botom btn-sig */
+.btn-sig {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-texto-header);
+    border: 1px solid var(--color-texto-header);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.btn-sig:hover{
+    background: var(--color-sec);
+    transition: 1s;
+}
+/* ocultamos los iconos en
+ pantallas mayores a 700px */
+
+.header-sig nav .fa-solid {
+    display: none;
+}
+
+
+/* 9:  Estilos definidos para dispositivos moviles,
+diseño responsive para pantallas con max-width: 700px */
+
+@media screen and (max-width: 700px) {
+    /* ajustamos el tamaño de los textos del logotipo del geoportal */        
+    nav{        
+        justify-content: right;
+        align-items: center;         
+        position: relative;          
+    }
+    .logo-uniquindio{
+        position: absolute;
+        top: 150%;
+        left: 50%;        
+        transform: translate(-50%, -50%);
+    }   
+    .logotipo-sig{        
+        margin-top: 80px;
+    }
+    .logotipo-sig h1{   
+             
+        font-size: 35px;
+        line-height: 10px;        
+    }    
+    .logotipo-sig p{
+        padding-top: 60px;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    /* estilos para la barra de links de navegacion */
+    .links-navegacion{
+        position: fixed;
+        background: var(--color-sec);
+        height: 100vh;
+        width: 250px;
+        top: 0px;
+        right: -250px;
+        text-align: left;
+        z-index: 2000;
+        transition: 1s;        
+    }
+    .links-navegacion ul{
+        padding: 10px;
+    }
+
+    /* desplegamos los links en forma de bloque */
+    .links-navegacion ul li {
+        display: block;
+    }
+
+    /* Activamos los iconos */
+    .header-sig nav .fa-solid{
+        display: block;
+        color: var(--color-texto-header);
+        margin: 3px;
+        font-size: 30px;
+        padding-left: 4px;
+        padding-bottom: 3px;
+    }
+    .btn-sig{
+        margin-top: 30px ;
+    }
+
+}
+
+
