@@ -3,27 +3,32 @@
     --color-sec: #f44336;
     --fondo-blanco: #fff;
     --color-texto-header: #fff;
-    --color-gradiente: rgba(4,9,30,0.8);
+    --color-gradiente: rgba(4,9,30,0.8);    
 }
 
 /* 7: estilos generales para el documento */
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;    
+}
+body{
+    background: var(--fondo-blanco);
+    overflow: scroll;  
 }
 
 /* 8: estilos para el header-sig , vista general;
 dimensiones alto y ancho;
 imagen de fondo, posicionamiento y tamaño */
-.header-sig{    
+.header{    
     min-height: 100vh;
     width: 100%;    
     background-image: linear-gradient(var(--color-gradiente), var(--color-gradiente)), url(../img/banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;   
+    position: relative;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);  
 }
 
 /* estilos para la barra de navegacion */
@@ -132,7 +137,7 @@ del documento */
 /* ocultamos los iconos en
  pantallas mayores a 700px */
 
-.header-sig nav .fa-solid {
+nav .fa-solid {
     display: none;
 }
 
@@ -156,8 +161,7 @@ diseño responsive para pantallas con max-width: 700px */
     .logotipo-sig{        
         margin-top: 80px;
     }
-    .logotipo-sig h1{   
-             
+    .logotipo-sig h1{           
         font-size: 35px;
         line-height: 10px;        
     }    
@@ -166,7 +170,6 @@ diseño responsive para pantallas con max-width: 700px */
         font-size: 14px;
         text-align: justify;
     }
-
     /* estilos para la barra de links de navegacion */
     .links-navegacion{
         position: fixed;
@@ -190,7 +193,7 @@ diseño responsive para pantallas con max-width: 700px */
     }
 
     /* Activamos los iconos */
-    .header-sig nav .fa-solid{
+    nav .fa-solid{
         display: block;
         color: var(--color-texto-header);
         margin: 3px;
@@ -244,7 +247,7 @@ con orientacion horizontal */
         padding: 7px 15px;
         font-size: 13px;
     }   
-    .header-sig nav .fa-solid{
+    .header nav .fa-solid{
         font-size: 20px;
     }
     .links-navegacion ul li a{
@@ -254,3 +257,69 @@ con orientacion horizontal */
 }
 
 
+
+
+
+
+
+
+
+
+
+/* Estilos para la el sub-header */
+.sub-header{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(var(--color-gradiente), var(--color-gradiente)), url(../img/sub-banner-2.webp);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    text-align: center;
+    color: var(--color-texto-header);  
+    justify-content: center;  
+    align-items: center;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+}
+.sub-header .logotipo-sig{ 
+    width: auto;   
+    margin:0;
+    padding: 0;  
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);        
+}
+.sub-header h1{
+    margin: 0px;
+   font-size: 60px;
+   line-height: 65px;
+}
+.sub-header p{
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* estilos para seccion geoportal */
+.geoportal {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.geoportal h1{
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+.geoportal p{
+    font-size: 17px;
+    text-align: justify;
+}
+.citas-bibliograficas{
+    text-decoration: none;
+    position: relative;
+    left: 90%;
+    text-align: left;
+}
