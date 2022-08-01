@@ -3,7 +3,11 @@
     --color-sec: #f44336;
     --fondo-blanco: #fff;
     --color-texto-header: #fff;
-    --color-gradiente: rgba(4,9,30,0.8);    
+    --color-gradiente: rgba(4,9,30,0.8);  
+    --color-fondo-mapBase: rgba(0,0,0,0.1) ;
+    --color-borde-minimap: #fff;
+    --color-fondo-icon: rgba(112, 109, 109, 0.3);
+    --color-iconos: rgba(0,0,0,0.7);  
 }
 
 /* 7: estilos generales para el documento */
@@ -16,6 +20,14 @@ body{
     background: var(--fondo-blanco);
     overflow: scroll;  
 }
+
+
+
+
+
+
+/* ESTILOS PARA EL HEADER DISPOSITIVOS DE ESCRITORIO */
+/* * * * * * * * * * * * * * * * * * * * * * */
 
 /* 8: estilos para el header-sig , vista general;
 dimensiones alto y ancho;
@@ -110,12 +122,16 @@ del documento */
 }
 .logotipo-sig h1{
     font-size: 65px;
-    line-height: 40px;
+    line-height: 40px;    
     margin-top: 30px;
+}
+.logotipo-sig h2{
+    font-size: 65px;
 }
 .logotipo-sig p{
     margin: 50px 0px 60px;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 300;
     
 }
 /* estilos para el botom btn-sig */
@@ -142,8 +158,13 @@ nav .fa-solid {
 }
 
 
-/* 9:  Estilos definidos para dispositivos moviles,
-diseño responsive para pantallas con max-width: 700px */
+
+
+
+
+/* ESTILOS PARA EL HEADER DEL INDEX.HTML  */
+/* VERSION PARA MOVILES DE MAX-WIDTH: 800PX */
+/* * * * * * * * * * * * * * * * * * * * * * * */
 
 @media screen and (max-width: 800px) {
     /* ajustamos el tamaño de los textos del logotipo del geoportal */        
@@ -162,12 +183,14 @@ diseño responsive para pantallas con max-width: 700px */
         margin-top: 80px;
     }
     .logotipo-sig h1{           
+        font-size: 40px;        
+    }   
+    .logotipo-sig h2{
         font-size: 35px;
-        line-height: 10px;        
-    }    
+    } 
     .logotipo-sig p{
         padding-top: 60px;
-        font-size: 14px;
+        font-size: 15px;
         text-align: justify;
     }
     /* estilos para la barra de links de navegacion */
@@ -179,7 +202,7 @@ diseño responsive para pantallas con max-width: 700px */
         top: 0px;
         right: -250px;
         text-align: left;
-        z-index: 2000;
+        z-index: 5000;
         transition: 1s;
         overflow: scroll;        
     }
@@ -207,16 +230,18 @@ diseño responsive para pantallas con max-width: 700px */
 
 }
 
-/* 11: Diseño Responsive para dispositivos moviles,
-con orientacion horizontal */
+/* ESTILOS PARA EL HEADER DISPOSITIVOS MOVILES CON MAX-WIDTH: 800PX CON ORIENTACION HORIZONTAL */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* 11: */
 @media screen and (max-width:800px) and (orientation:landscape) {
     .logo-uniquindio{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         padding: 5px;
         position: absolute;
-        top: 70%;
-        left: 7%;
+        top: 95%;
+        left: 8%;
     }  
     .links-navegacion{
         z-index: 1000;
@@ -232,18 +257,22 @@ con orientacion horizontal */
         z-index: 0;                    
     }
     .logotipo-sig h1{
-        font-size: 30px;
-        line-height: 5px;                    
+        font-size: 45px;
+        line-height: 30px;                    
     }
+    .logotipo-sig h2{
+        font-size: 40px;
+    }
+
     .logotipo-sig p{      
         /* arriba/ derecha /abajo/ izquierda */
-        margin: 70px 0px 0px 0px;
+        margin: 50px 0px 0px 0px;
         padding: 0px;
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
     }
     .btn-sig{        
-        margin: 80px 0px 0px 0px;
+        margin: 50px 0px 0px 0px;
         padding: 7px 15px;
         font-size: 13px;
     }   
@@ -264,6 +293,8 @@ con orientacion horizontal */
 
 
 
+/* ESTILOS DEFINIDOS PARA EL  SUB HEADER DISPOSITIVOS DE ESCRITORIO */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
 /* Estilos para la el sub-header */
@@ -301,6 +332,25 @@ con orientacion horizontal */
     line-height: 20px;
 }
 
+
+
+/* ESTILOS PARA EL SUB-HEADER DISPOSITIVOS MOVILES DE MAX-WIDTH: 800PX */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */ 
+
+@media screen and (max-width: 800px){
+    .sub-header .logotipo-sig h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+}
+
+
+
+
+/* ESTILOS PARA LA SECCION GEOPORTAL INDEX.HTML PANTALLAS GRANDES */
+/* * * * * * * * * * * * * * * * * * * * * * * * */
+
 /* estilos para seccion geoportal */
 .geoportal {
     width: 80%;
@@ -309,7 +359,7 @@ con orientacion horizontal */
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.geoportal h1{
+.geoportal h1{    
     font-size: 30px;
     padding-bottom: 25px;
 }
@@ -319,7 +369,137 @@ con orientacion horizontal */
 }
 .citas-bibliograficas{
     text-decoration: none;
-    position: relative;
-    left: 90%;
+    position: relative;    
     text-align: left;
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS PARA SECCION VISOR-GEOGRAFICO PANTALLAS GRANDES */
+
+.visor-geografico{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 50px; 
+    padding-bottom: 100px;      
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;         
+} 
+.visor-geografico p{
+    padding-top: 20px;
+    font-size: 16px;
+}
+.visor-geografico .p-1{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* estilos para el elemento map */
+#map{
+    width: 95%;
+    margin: auto;
+    min-height: 500px;
+    margin-top: 30px;
+    background: var(--color-fondo-mapBase) ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+.iconos-tools{
+    position: absolute;
+    width: 3%;
+    top: 30%;
+    right: 0;
+    height: 100vh;
+    z-index: 2000;   
+    cursor: pointer;
+}
+.iconos-tools .fa-solid{
+    padding: 5px;
+    margin-bottom: 8px;    
+    border-radius: 30%;
+    background: var(--color-borde-minimap);
+    color: var(--color-iconos); 
+    font-size: 20px;   
+}
+#mapGeolocalizacion {
+    position: absolute;
+    z-index: 1000;
+    top: 40%;
+    right: 5%;
+    height: 40%;
+    width: 20%;
+    border-radius: 10px;
+    background: var(--color-fondo-mapBase);
+    border: 2px solid var(--color-borde-minimap);
+    visibility: visible;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.4);
+    transition: 0.1s;
+}
+.map-base i img{
+    position: absolute;
+    z-index: 2000;
+    top: 12px;
+    right: 5px;
+    margin-top: 10px;
+    width: 26px;
+    margin-bottom: 20px;
+}
+.leaflet-top .leaflet-control {
+    margin-top: 75px;
+}
+.leaflet-right .leaflet-control {
+    margin-right: 6px;
+}
+.leaflet-touch .leaflet-bar a {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+/* ocultamos el control de zoom en el minimapa de geolocalizacion */
+.mapGeo div.leaflet-control-zoom.leaflet-bar.leaflet-control{
+    display: none;
+}
+/* ocultamos el control de attribution en el minimapa de geolocalizacion */
+.mapGeo div.leaflet-control-attribution.leaflet-control{
+    display: none;
+}
+
+
+/* ESTILOS SECCION VISOR GEOGRAFICO PARA DISPOSITIVOS MOVILES 800PX VERTICALES */
+
+@media screen and (max-width: 700px){
+    .visor-geografico p{
+        text-align: justify;
+        font-size: 13px;
+
+    }
+    .visor-geografico .iconos-tools{
+        background: red;
+        right: 8%;
+    }
+    .visor-geografico #mapGeolocalizacion{
+        height: 38%;
+        width: 60%;
+        right: 15%;
+        top: 50%;
+    }
+}
+
